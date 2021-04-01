@@ -1,10 +1,8 @@
-// Create variables targetting the relevant DOM elements here 👇
-//When the page loads, we should see a cover with a randomly selected image, title, and tagline which includes two random descriptors
+// Query Selectors
 var coverImage = document.querySelector('.cover-image');
 var coverTitle = document.querySelector('.cover-title');
 var tagLine1 = document.querySelector('.tagline-1');
 var tagLine2 = document.querySelector('.tagline-2');
-//button
 var randomButton = document.querySelector('.random-cover-button');
 var saveButton = document.querySelector('.save-cover-button');
 var viewButton = document.querySelector('.view-saved-button');
@@ -13,16 +11,18 @@ var homeButton = document.querySelector('.home-button');
 
 // We've provided a few variables below
 // var savedCovers = [
-//   new Cover("http://3.bp.blogspot.com/-iE4p9grvfpQ/VSfZT0vH2UI/AAAAAAAANq8/wwQZssi-V5g/s1600/Do%2BNot%2BForsake%2BMe%2B-%2BImage.jpg", "Sunsets and Sorrows", "sunsets", "sorrows")
+//   new Cover("http://3.bp.blogspot.com/-iE4p9grvfpQ/VSfZT0vH2UI/AAAAAAAANq8/
+//wwQZssi-V5g/s1600/Do%2BNot%2BForsake%2BMe%2B-%2BImage.jpg", 
+//"Sunsets and Sorrows", "sunsets", "sorrows")
 // ];
 // var currentCover; // = randomCover(covers, titles, descriptors);
 
 
-//event listeners
+//Event listeners
 window.addEventListener('load', randomCover);
 randomButton.addEventListener('click', randomCover);
-// event handlers
 
+//Event handlers
 function randomCover(){
   var newCover = createCover(covers,titles,descriptors);
   console.log(newCover)
