@@ -5,6 +5,7 @@ var tagLine1 = document.querySelector('.tagline-1');
 var tagLine2 = document.querySelector('.tagline-2');
 var randomButton = document.querySelector('.random-cover-button');
 var saveButton = document.querySelector('.save-cover-button');
+var savedCovers = document.querySelector('.saved-view')
 var viewButton = document.querySelector('.view-saved-button');
 var makeButton = document.querySelector('.make-new-button');
 var homeButton = document.querySelector('.home-button');
@@ -24,9 +25,19 @@ var formView = document.querySelector('.form-view')
 window.addEventListener('load', randomCover);
 randomButton.addEventListener('click', randomCover);
 makeButton.addEventListener('click', viewForm)
-homeButton.addEventListener('click', viewHomePage);
+viewButton.addEventListener('click', viewSaveCovers)
+// viewForm
+// savedCovers.add
+// homeButton.addEventListener('click', viewHomePage);
 
 //Event handlers
+function viewSaveCovers(){
+  hideHomePage.classList.add('hidden')
+  // saveButton.classList.remove('hidden')
+  savedCovers.classList.remove('hidden')
+  formView.classList.add('hidden')
+}
+
 function viewForm(){
   formView.classList.remove('hidden')
   homeButton.classList.remove('hidden')
