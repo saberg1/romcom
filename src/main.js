@@ -8,6 +8,8 @@ var saveButton = document.querySelector('.save-cover-button');
 var viewButton = document.querySelector('.view-saved-button');
 var makeButton = document.querySelector('.make-new-button');
 var homeButton = document.querySelector('.home-button');
+var hideHomePage = document.querySelector('.home-view')
+var formView = document.querySelector('.form-view')
 
 // We've provided a few variables below
 // var savedCovers = [
@@ -21,8 +23,18 @@ var homeButton = document.querySelector('.home-button');
 //Event listeners
 window.addEventListener('load', randomCover);
 randomButton.addEventListener('click', randomCover);
+makeButton.addEventListener('click', viewForm)
+homeButton.addEventListener('click', viewHomePage);
 
 //Event handlers
+function viewForm(){
+  formView.classList.remove('hidden')
+  homeButton.classList.remove('hidden')
+  hideHomePage.classList.add('hidden')
+  randomButton.classList.add('hidden');
+  saveButton.classList.add('hidden')
+}
+
 function randomCover(){
   var newCover = createCover(covers,titles,descriptors);
   console.log(newCover)
