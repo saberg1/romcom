@@ -21,6 +21,7 @@ var formView = document.querySelector('.form-view')
 // var currentCover; // = randomCover(covers, titles, descriptors);
 
 
+
 //Event listeners
 window.addEventListener('load', randomCover);
 randomButton.addEventListener('click', randomCover);
@@ -58,7 +59,12 @@ function viewForm(){
   saveButton.classList.add('hidden')
 
 }
+//Event listeners
+window.addEventListener('load', randomCover);
+randomButton.addEventListener('click', randomCover);
 
+
+//Event handlers
 function randomCover(){
   var newCover = createCover(covers,titles,descriptors);
   console.log(newCover)
@@ -83,3 +89,5 @@ function getRandomElement(array) {
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
+
+
