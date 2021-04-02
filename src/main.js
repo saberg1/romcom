@@ -26,16 +26,28 @@ window.addEventListener('load', randomCover);
 randomButton.addEventListener('click', randomCover);
 makeButton.addEventListener('click', viewForm)
 viewButton.addEventListener('click', viewSaveCovers)
+homeButton.addEventListener('click', goHomePage)
 // viewForm
 // savedCovers.add
 // homeButton.addEventListener('click', viewHomePage);
 
 //Event handlers
+function goHomePage(){
+  savedCovers.classList.add('hidden');
+  formView.classList.add('hidden');
+  hideHomePage.classList.remove('hidden')
+  randomButton.classList.remove('hidden');
+  saveButton.classList.remove('hidden');
+  homeButton.classList.add('hidden')
+}
+
 function viewSaveCovers(){
-  hideHomePage.classList.add('hidden')
-  // saveButton.classList.remove('hidden')
   savedCovers.classList.remove('hidden')
+  hideHomePage.classList.add('hidden')
+  saveButton.classList.add('hidden')
   formView.classList.add('hidden')
+  randomButton.classList.add('hidden')
+  homeButton.classList.remove('hidden')
 }
 
 function viewForm(){
@@ -44,6 +56,7 @@ function viewForm(){
   hideHomePage.classList.add('hidden')
   randomButton.classList.add('hidden');
   saveButton.classList.add('hidden')
+
 }
 
 function randomCover(){
