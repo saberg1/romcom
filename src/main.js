@@ -23,13 +23,11 @@ var titleInput = document.querySelector('.user-title');
 var descriptorInput1 = document.querySelector('.user-desc1');
 var descriptorInput2 = document.querySelector('.user-desc2');
 
+var savedCoversGrid = document.querySelector('.saved-covers-section')
+
 // We've provided a few variables below
-// var savedCovers = [
-//   new Cover("http://3.bp.blogspot.com/-iE4p9grvfpQ/VSfZT0vH2UI/AAAAAAAANq8/
-//wwQZssi-V5g/s1600/Do%2BNot%2BForsake%2BMe%2B-%2BImage.jpg",
-//"Sunsets and Sorrows", "sunsets", "sorrows")
-// ];
-// var currentCover; // = randomCover(covers, titles, descriptors);
+var miniPosters = [];
+//var currentCover; // = randomCover(covers, titles, descriptors);
 
 
 
@@ -44,12 +42,21 @@ newBookButton.addEventListener('click', function(event){
   event.preventDefault()
   createBook()
 });
+saveButton.addEventListener('click', saveMiniPoster)
+
 // viewForm
 // savedCovers.add
 // homeButton.addEventListener('click', viewHomePage);
 
-var savedBookCovers = [];
 //Event handlers
+function saveMiniPoster (){
+ var miniPoster = new Cover(coverImage.src, coverTitle.innerText,
+    tagLine1.innerText, tagLine2.innerText)
+    miniPosters.push(miniPoster)
+
+}
+
+
 function createBook(){
   var newBook = new Cover(coverInput.value,titleInput.value,
     descriptor1.value, descriptor2.value);
@@ -65,7 +72,6 @@ function createBook(){
     coverTitle.innerText = titles[titles.length-1];
     tagLine1.innerText = descriptors[descriptors.length-2];
     tagLine2.innerText = descriptors[descriptors.length-1];
-
 }
 
 
@@ -85,6 +91,13 @@ function viewSaveCovers() {
   formView.classList.add('hidden')
   randomButton.classList.add('hidden')
   homeButton.classList.remove('hidden')
+
+  //for(var i = 0; miniPosters.length; i++){
+      savedCoversGrid.innerHTML += `<section class='mini-cover'> ${miniPosters[0]}</section>
+      <img class=${miniPosters[0].cover}`
+  //}
+  //var miniJPG = miniPosters.pop()
+  //savedCoversGrid.innerHTML += `<div class='.mini-cover'> ${miniJPG.cover} </div>`
 }
 
 function viewForm() {
