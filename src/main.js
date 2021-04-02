@@ -48,16 +48,24 @@ newBookButton.addEventListener('click', function(event){
 // savedCovers.add
 // homeButton.addEventListener('click', viewHomePage);
 
+var savedBookCovers = [];
 //Event handlers
 function createBook(){
-  // var coverUrl =  coverInput.value;
-  // var title =  titleInput.value;
-  // var descriptor1 = descriptor1.value;
-  // var descriptor2 = descriptor2.value;
-  console.log("Test")
-  //covers.push
-  //titles.push
-  //descriptors.push
+  var newBook = new Cover(coverInput.value,titleInput.value,
+    descriptor1.value, descriptor2.value);
+    //savedBookCovers.push(newBook)
+    //console.log(savedBookCovers)
+
+    titles.push(titleInput.value);
+    covers.push(coverInput.value);
+    descriptors.push(descriptor1.value);
+    descriptors.push(descriptor2.value);
+
+    coverImage.src = covers[covers.length-1];
+    coverTitle.innerText = titles[titles.length-1];
+    tagLine1.innerText = descriptors[descriptors.length-2];
+    tagLine2.innerText = descriptors[descriptors.length-1];
+
 }
 
 
@@ -89,7 +97,6 @@ function viewForm() {
 
 function randomCover() {
   var newCover = createCover(covers, titles, descriptors);
-  console.log(newCover)
   coverImage.src = newCover.cover;
   coverTitle.innerText = newCover.title;
   tagLine1.innerText = newCover.tagline1;
