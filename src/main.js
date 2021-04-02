@@ -27,7 +27,7 @@ var savedCoversGrid = document.querySelector('.saved-covers-section')
 
 // We've provided a few variables below
 var miniPosters = [];
-//var currentCover; // = randomCover(covers, titles, descriptors);
+var currentCover;
 
 
 
@@ -52,12 +52,16 @@ saveButton.addEventListener('click', saveMiniPoster)
 function saveMiniPoster (){
   var miniPoster = new Cover(coverImage.src, coverTitle.innerText,
     tagLine1.innerText, tagLine2.innerText)
-    if (!miniPosters.includes(miniPosters.id)){
-    miniPosters.push(miniPoster)
- }
-
+  for(var i = 0; i < miniPosters.length; i++){
+    if (miniPoster.cover !== miniPosters[i].cover){
+      miniPosters.push(miniPoster)
+    }
+  }
 }
 
+// function checkCover(){
+//   if(!)
+// }
 
 function createBook(){
   var newBook = new Cover(coverInput.value,titleInput.value,
