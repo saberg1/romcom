@@ -50,9 +50,11 @@ saveButton.addEventListener('click', saveMiniPoster)
 
 //Event handlers
 function saveMiniPoster (){
- var miniPoster = new Cover(coverImage.src, coverTitle.innerText,
+  var miniPoster = new Cover(coverImage.src, coverTitle.innerText,
     tagLine1.innerText, tagLine2.innerText)
+    if (!miniPosters.includes(miniPosters.id)){
     miniPosters.push(miniPoster)
+ }
 
 }
 
@@ -92,9 +94,14 @@ function viewSaveCovers() {
   randomButton.classList.add('hidden')
   homeButton.classList.remove('hidden')
 
-  //for(var i = 0; miniPosters.length; i++){
-      savedCoversGrid.innerHTML += `<section class='mini-cover'> ${miniPosters[0]}</section>
-      <img class=${miniPosters[0].cover}`
+  for(var i = 0; i < miniPosters.length; i++){
+      savedCoversGrid.innerHTML += `<div class='mini-cover'>
+      <img class='mini-cover' src=${miniPosters[i].cover}>
+      <h2 class='cover-title first-letter'>${miniPosters[i].title}</h2>
+      <h3 class='tagline'>A tale of ${miniPosters[i].tagline1} and ${miniPosters[i].tagline2}</h3>
+      </div>
+      `
+    }
   //}
   //var miniJPG = miniPosters.pop()
   //savedCoversGrid.innerHTML += `<div class='.mini-cover'> ${miniJPG.cover} </div>`
