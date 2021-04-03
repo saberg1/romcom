@@ -27,7 +27,7 @@ var savedCoversGrid = document.querySelector('.saved-covers-section')
 
 // We've provided a few variables below
 var miniPosters = [];
-var currentCover;
+var currentCover = []
 
 
 
@@ -52,9 +52,12 @@ saveButton.addEventListener('click', saveMiniPoster)
 function saveMiniPoster (){
   var miniPoster = new Cover(coverImage.src, coverTitle.innerText,
     tagLine1.innerText, tagLine2.innerText)
-  for(var i = 0; i < miniPosters.length; i++){
-    if (miniPoster.cover !== miniPosters[i].cover){
+    if(miniPosters.length === 0){
       miniPosters.push(miniPoster)
+    }
+    for(var i = 0; i < miniPosters.length; i++){
+    if(miniPosters[i].cover != miniPoster.cover ){
+        miniPosters.push(miniPoster)
     }
   }
 }
