@@ -104,6 +104,7 @@ function randomCover() {
   coverTitle.innerText = currentCover.title;
   tagLine1.innerText = currentCover.tagline1;
   tagLine2.innerText = currentCover.tagline2;
+  saveMiniPoster()
 }
 
 function createCover(covers, titles, descriptors) {
