@@ -55,6 +55,10 @@ function createBook(event){
     tagLine2.innerText = descriptors[descriptors.length-1];
 }
 
+function homePage(){
+
+}
+
 function goHomePage() {
   savedView.classList.add('hidden');
   formView.classList.add('hidden');
@@ -73,6 +77,14 @@ function viewSaveCovers() {
   homeButton.classList.remove('hidden')
 }
 
+function viewForm() {
+  formView.classList.remove('hidden')
+  homeButton.classList.remove('hidden')
+  hideHomePage.classList.add('hidden')
+  randomButton.classList.add('hidden');
+  saveButton.classList.add('hidden')
+}
+
 function showSavedCovers(){
       savedCoversGrid.innerHTML += `<div class='mini-cover'>
       <img class='mini-cover' src=${currentCover.cover}>
@@ -80,14 +92,6 @@ function showSavedCovers(){
       <h3 class='tagline'>A tale of ${currentCover.tagline1} and ${currentCover.tagline2}</h3>
       </div>
       `
-}
-
-function viewForm() {
-  formView.classList.remove('hidden')
-  homeButton.classList.remove('hidden')
-  hideHomePage.classList.add('hidden')
-  randomButton.classList.add('hidden');
-  saveButton.classList.add('hidden')
 }
 
 function randomCover() {
@@ -112,4 +116,9 @@ function getRandomElement(array) {
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
+}
+
+function navToSection(origin, destination) {
+  origin.classList.toggle("hidden");
+  destination.classList.toggle("hidden");
 }
