@@ -10,6 +10,8 @@ var viewButton = document.querySelector('.view-saved-button');
 var makeButton = document.querySelector('.make-new-button');
 var homeButton = document.querySelector('.home-button');
 var newBookButton = document.querySelector('.create-new-book-button')
+
+var miniCoverDelete = document.querySelector('.mini-cover')
 //formViews
 var savedView = document.querySelector('.saved-view')
 var hideHomePage = document.querySelector('.home-view')
@@ -35,6 +37,7 @@ newBookButton.addEventListener('click', createBook)
 saveButton.addEventListener('click', saveMiniPoster)
 
 //Event Handlers
+
 function saveMiniPoster (){
   if (!savedCovers.includes(currentCover)) {
     savedCovers.push(currentCover);
@@ -74,12 +77,17 @@ function viewSaveCovers() {
 }
 
 function showSavedCovers(){
-      savedCoversGrid.innerHTML += `<div class='mini-cover'>
+      savedCoversGrid.innerHTML += `<div class='mini-cover' ondblclick="remove(this)">
       <img class='mini-cover' src=${currentCover.cover}>
       <h2 class='cover-title first-letter'>${currentCover.title}</h2>
       <h3 class='tagline'>A tale of ${currentCover.tagline1} and ${currentCover.tagline2}</h3>
       </div>
       `
+}
+
+function remove(el) {
+  var element = el;
+  element.remove();
 }
 
 function viewForm() {
