@@ -8,11 +8,14 @@ Feeling a little lonely and isolated coming into a full year of a the panny? Wan
 
 ### Navigation
 
+<p align="center"><img src="https://ibb.co/0rYf65X" alt="Home Page" width="450" height="auto" style="border-radius:5px"/></p>
+
 Home Page
-![Home Page](https://ibb.co/0rYf65X "Home Page")
+<!-- ![Home Page](https://ibb.co/0rYf65X "Home Page") -->
+
 
 Make Your Cover Page
-![Make Your Cover Page](https://ibb.co/56qJ4hX)
+![Make Your Cover Page](https://ibb.co/56qJ4hX "Make Your Own Cover")
 
 Saved Covers page
-![Save Cover Page](https://ibb.co/P1Kp58c)
+![Save Cover Page](https://ibb.co/P1Kp58c "Saved Covers")
