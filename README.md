@@ -9,7 +9,7 @@ Feeling a little lonely and isolated coming into a full year of a the panny? Wan
 ### Navigation
 
 Home Page
-![Home Page](https://ibb.co/0rYf65X)
+![Home Page](https://ibb.co/0rYf65X "Home Page")
 
 Make Your Cover Page
 ![Make Your Cover Page](https://ibb.co/56qJ4hX)
