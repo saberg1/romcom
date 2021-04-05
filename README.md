@@ -8,7 +8,8 @@ Feeling a little lonely and isolated coming into a full year of a the panny? Wan
 
 ### Navigation
 
-<p align="center"><img src="https://ibb.co/0rYf65X" alt="Home Page" width="450" height="auto" style="border-radius:5px"/></p>
+
+<img src="https://ibb.co/0rYf65X" width="100%" height="500"/>
 
 Home Page
 <!-- ![Home Page](https://ibb.co/0rYf65X "Home Page") -->
