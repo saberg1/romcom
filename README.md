@@ -19,6 +19,8 @@ Feeling a little lonely and isolated coming into a full year of a the panny? Wan
 
 ## Technologies
 
-###JavaScript
-###HTML
-###CSS
+### JavaScript
+
+### HTML
+
+### CSS
