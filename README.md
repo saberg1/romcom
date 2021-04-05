@@ -16,7 +16,7 @@ Home Page
 
 
 Make Your Cover Page
-![Make Your Cover Page](https://ibb.co/56qJ4hX "Make Your Own Cover")
+![Make Your Cover Page](https://i.ibb.co/XbmGLxf/make-cover.png "Make Your Own Cover")
 
 Saved Covers page
-![Save Cover Page](https://ibb.co/P1Kp58c "Saved Covers")
+![Save Cover Page](https://i.ibb.co/SVbTKpt/saved-covers.png "Saved Covers")
